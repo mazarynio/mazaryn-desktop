@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/Main.qml"/>
+    <qresource prefix="/pages/Signup.qml"/>
+    <qresource prefix="/new/prefix1"/>
+    <qresource prefix="/pages/Login.qml"/>
+    <qresource prefix="/">
+        <file>Login.qml</file>
+    </qresource>
+</RCC>
