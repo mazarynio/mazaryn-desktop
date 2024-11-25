@@ -59,7 +59,6 @@ Page {
             color: theme.textColor
         }
 
-
         // Email section
         Label {
             text: "Email*"
@@ -109,7 +108,6 @@ Page {
                 } else {
                     signupPage.passwordError = ""
                 }
-
             }
         }
 
@@ -120,9 +118,22 @@ Page {
             font.pixelSize: 12
         }
 
+        // Forgot Password Link
+        Label {
+            text: "<a href='#'>Forgot Password?</a>"
+            color: theme.primaryColor
+            font.pixelSize: 14
+            Layout.alignment: Qt.AlignRight
+
+            MouseArea {
+                anchors.fill: parent
+                cursorShape: Qt.PointingHandCursor
+                onClicked: stackView.push("qrc:/pages/ResetPass.qml")
+            }
+        }
 
         Button {
-            text: "Sign up"
+            text: "Login"
             Layout.fillWidth: true
             enabled: canSignUp() && !busyIndicator.running
 
@@ -170,7 +181,6 @@ Page {
             busyIndicator.running = inProgress
         }
     }
-
 
     function canLogin() {
         return emailField.text.includes("@") &&

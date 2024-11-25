@@ -22,6 +22,12 @@ qt_add_qml_module(appmazaryn-desktop
         RESOURCES
         SOURCES loginhandler.h loginhandler.cpp
         QML_FILES Login.qml
+        QML_FILES ResetPass.qml
+        SOURCES resetpasswordhandler.h resetpasswordhandler.cpp
+        QML_FILES About.qml
+        QML_FILES Contact.qml
+        QML_FILES Careers.qml
+        QML_FILES PrivacyPolicy.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

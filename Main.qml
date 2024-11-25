@@ -80,7 +80,7 @@ ApplicationWindow {
                             font.pixelSize: 16
                         }
 
-                        onClicked: stackView.push("Signup.qml")  // Updated path
+                        onClicked: stackView.push("Signup.qml")
                     }
 
                     Button {
@@ -103,7 +103,80 @@ ApplicationWindow {
                             font.pixelSize: 16
                         }
 
-                        onClicked: stackView.push("Login.qml")  // Updated path
+                        onClicked: stackView.push("Login.qml")
+                    }
+                }
+            }
+
+            // Footer section for "About" and "Contact"
+            Rectangle {
+                width: parent.width
+                height: 50
+                anchors.bottom: parent.bottom
+                color: "transparent"
+
+                RowLayout {
+                    spacing: 20
+                    anchors.centerIn: parent
+
+                    // About Section
+                    Text {
+                        text: "About"
+                        color: theme.primaryColor
+                        font.pixelSize: 14
+                        font.bold: true
+                        Layout.alignment: Qt.AlignVCenter
+
+                        MouseArea {
+                            anchors.fill: parent
+                            cursorShape: Qt.PointingHandCursor
+                            onClicked: stackView.push("About.qml")
+                        }
+                    }
+
+                    // Contact Section
+                    Text {
+                        text: "Contact"
+                        color: theme.primaryColor
+                        font.pixelSize: 14
+                        font.bold: true
+                        Layout.alignment: Qt.AlignVCenter
+
+                        MouseArea {
+                            anchors.fill: parent
+                            cursorShape: Qt.PointingHandCursor
+                            onClicked: stackView.push("Contact.qml")
+                        }
+                    }
+
+                    // Careers Section
+                    Text {
+                        text: "Careers"
+                        color: theme.primaryColor
+                        font.pixelSize: 14
+                        font.bold: true
+                        Layout.alignment: Qt.AlignVCenter
+
+                        MouseArea {
+                            anchors.fill: parent
+                            cursorShape: Qt.PointingHandCursor
+                            onClicked: stackView.push("Careers.qml")
+                        }
+                    }
+
+                    // Privacy Policy
+                    Text {
+                        text: "Privacy Policy"
+                        color: theme.primaryColor
+                        font.pixelSize: 14
+                        font.bold: true
+                        Layout.alignment: Qt.AlignVCenter
+
+                        MouseArea {
+                            anchors.fill: parent
+                            cursorShape: Qt.PointingHandCursor
+                            onClicked: stackView.push("PrivacyPolicy.qml")
+                        }
                     }
                 }
             }
